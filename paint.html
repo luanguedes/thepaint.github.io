@@ -1,21 +1,18 @@
 <html>
  <head>
- <title>The Paint</title>
   <script src="js/prototype.js"></script>
   <script src="js/classes.js"></script>
   <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  
  </head>
  <body >
-   <h1>The Paint</h1>
    <div>
      <input type="button" onclick="drawLine();" value="Linha"/>
      <input type="button" onclick="drawStrokeRect();" value="Retangulo"/>
      <input type="button" onclick="drawFillRect();" value="Retangulo Cheio"/>
      <input type="button" id="toggle" onclick="toggleShadow();" value="Ligar sombra"/>
-    <input type="button" onclick="save();" value="Salvar"/>
-    <br>
-    <input type="button" onclick="drawStroke();" value="Triangulo"/>
+    <button><a id="download" onclick="save()">Salvar</a></button>
    </div>
    <canvas id="canvas" width="400" height="400" style="border: solid;" onmousedown="createFigure(event);" onmouseUp="closeFigure(event);"></canvas>
    <img id="imagem" style="border:solid;">

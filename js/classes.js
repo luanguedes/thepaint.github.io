@@ -38,6 +38,11 @@ var RetanguloCheio = Class.create(Figura, {
     }
 });
 
+var Circulo = Class.create(Figura, {
+    draw: function(canvas) {
+    }
+})
+
 
 Element.prototype.leftTopScreen = function() {
     var x = this.offsetLeft;
@@ -67,14 +72,18 @@ function drawFillRect() {
     figura = new RetanguloCheio();
 }
 
-function drawStroke(){
-    fugura = new Triangulo();
+function drawCircle(){
+    figura = new Circulo();
+}
+
+function drawFillCircle(){
+    figura = new CirculoCheio();
 }
 
 function createFigure(event) {
     console.log("X do mouse: " + event.clientX);
     console.log("Y do mouse: " + event.clientY);
-    var xy = document.querySelector("#canvas").leftTopScreen();
+    var xy = document.querySelector("canvas").leftTopScreen();
     var x = event.clientX;
     var y = event.clientY;
 
@@ -83,14 +92,15 @@ function createFigure(event) {
 
 function closeFigure(event) {
     createFigure(event);
-    var ctx = document.querySelector("#canvas").getContext('2d');
+    var canvas = document.getElementById('canvas'),
+    ctx = canvas.getContext('2d');
     figura.draw(ctx);
     figura = Object.clone(figura);
     figura.clear();
 }
 
 function toggleShadow() {
-    var ctx = document.querySelector("#canvas").getContext('2d');
+    var ctx = document.querySelector("canvas").getContext('2d');
     if (ctx.shadowBlur == 10) {
         ctx.shadowColor = "transparent";
         ctx.shadowBlur = 0;
@@ -102,7 +112,14 @@ function toggleShadow() {
     }
 }
 
-function save() {
-    var img = document.querySelector("#imagem");
-    img.src = document.querySelector("#canvas").toDataURL("image/png");
+function downloadCanvas(link, canvasId, filename) {
+    link.href = document.getElementById(canvasId).toDataURL();
+    link.download = filename;
+}
+
+function save(){
+document.getElementById('download').addEventListener('click', function() {
+    downloadCanvas(this, 'canvas', 'paint.png');
+}, false);
+
 }
