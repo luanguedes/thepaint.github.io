@@ -26,6 +26,29 @@ var Linha = Class.create(Figura, {
     }
 });
 
+var Linha2 = Class.create(Figura, {
+    draw: function(canvas) {
+        canvas.beginPath();
+        canvas.moveTo(this.x1, this.y1);
+        canvas.lineTo(this.x2, this.y2);
+        canvas.stroke();
+        canvas.lineWidth = 3;
+        canvas.stokeStyle="#FF0000";
+    }
+});
+
+var Linha3 = Class.create(Figura, {
+    draw: function(canvas) {
+        canvas.beginPath();
+        canvas.moveTo(this.x1, this.y1);
+        canvas.lineTo(this.x2, this.y2);
+        canvas.stroke();
+        canvas.lineWidth = 6;
+        canvas.stokeStyle="#FF0000";
+    }
+});
+
+
 var Retangulo = Class.create(Figura, {
     draw: function(canvas) {
         canvas.strokeRect(this.x1, this.y1, this.x2 - this.x1, this.y2 - this.y1);
@@ -79,6 +102,14 @@ Element.prototype.leftTopScreen = function() {
 
 function drawLine() {
     figura = new Linha();
+}
+
+function drawLine2() {
+    figura = new Linha2();
+}
+
+function drawLine3() {
+    figura = new Linha3();
 }
 
 function drawStrokeRect() {
