@@ -38,10 +38,27 @@ var RetanguloCheio = Class.create(Figura, {
     }
 });
 
-var Circulo = Class.create(Figura, {
+var Triangulo = Class.create(Figura, {
     draw: function(canvas) {
+        canvas.beginPath();
+        canvas.moveTo(this.x1, this.y1);
+        canvas.lineTo(this.x2, this.y2);
+        canvas.lineTo(this.y2, this.x2);
+        canvas.closePath();
+        canvas.stroke();
     }
-})
+});
+
+var TrianguloCheio = Class.create(Figura, {
+    draw: function(canvas) {
+        canvas.beginPath();
+        canvas.moveTo(this.x1, this.y1);
+        canvas.lineTo(this.x2, this.y2);
+        canvas.lineTo(this.y2, this.x2);
+        canvas.closePath();
+        canvas.fill();
+    }
+});
 
 
 Element.prototype.leftTopScreen = function() {
@@ -72,12 +89,12 @@ function drawFillRect() {
     figura = new RetanguloCheio();
 }
 
-function drawCircle(){
-    figura = new Circulo();
+function drawTriangule(){
+    figura = new Triangulo();
 }
 
-function drawFillCircle(){
-    figura = new CirculoCheio();
+function drawFillTriangule(){
+    figura = new TrianguloCheio();
 }
 
 function createFigure(event) {
