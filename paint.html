@@ -8,17 +8,19 @@
  </head>
  <body >
    <div>
-     <input type="button" onclick="drawLine();" value="Linha"/>
-     <input type="button" onclick="drawLine2();" value="Linha 2"/>
-     <input type="button" onclick="drawLine3();" value="Linha 3"/>
-     <input type="button" onclick="drawStrokeRect();" value="Retangulo"/>
-     <input type="button" onclick="drawFillRect();" value="Retangulo Cheio"/>
+    <input type="image" onclick="drawLine();" src="imagens/linha.png" class="botao">
+     <input type="image" onclick="drawLine2();" src="imagens/linha2.png" class="botao">
+     <input type="image" onclick="drawLine3();" src="imagens/linha3.png" class="botao">
+     <input type="image" onclick="drawStrokeRect();" src="imagens/Retangulo.png" class="botao">
+     <input type="image" onclick="drawFillRect();" src="imagens/Retangulo2.png" class="botao">
+
      <input type="button" id="toggle" onclick="toggleShadow();" value="Ligar sombra"/>
     <button><a id="download" onclick="save()">Salvar</a></button>
     <br>
     <br>
-     <input type="button" onclick="drawTriangule();" value="Triangulo"/>
-     <input type="button" onclick="drawFillTriangule();" value="TrianguloCheio"/>
+      <input type="image"  onclick="drawTriangule();" src="imagens/Tri.png" class="botao">
+      <input type="image"  onclick="drawFillTriangule();" src="imagens/Tri2.png" class="botao">
+
 
    </div>
    <canvas id="canvas" width="400" height="400" style="border: solid;" onmousedown="createFigure(event);" onmouseUp="closeFigure(event);"></canvas>
