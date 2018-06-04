@@ -4,26 +4,28 @@
   <script src="js/classes.js"></script>
   <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <title>The Paint</title>
   
  </head>
  <body >
-   <div>
-    <input type="image" onclick="drawLine();" src="imagens/linha.png" class="botao">
-     <input type="image" onclick="drawLine2();" src="imagens/linha2.png" class="botao">
-     <input type="image" onclick="drawLine3();" src="imagens/linha3.png" class="botao">
-     <input type="image" onclick="drawStrokeRect();" src="imagens/Retangulo.png" class="botao">
-     <input type="image" onclick="drawFillRect();" src="imagens/Retangulo2.png" class="botao">
+  <h1 id="titulo">The Paint</h1>
+   <div class="painel">
+    <input id="linha" type="image" onclick="drawLine();" src="imagens/linha.png" class="botao">
+     <input id="linha2" type="image" onclick="drawLine2();" src="imagens/linha2.png" class="botao">
+     <input id="linha3" type="image" onclick="drawLine3();" src="imagens/linha3.png" class="botao">
+     <input id="retangulo" type="image" onclick="drawStrokeRect();" src="imagens/Retangulo.png" class="botao">
+     <input id="retangulo2" type="image" onclick="drawFillRect();" src="imagens/Retangulo2.png" class="botao">
 
-     <input type="button" id="toggle" onclick="toggleShadow();" value="Ligar sombra"/>
-    <button><a id="download" onclick="save()">Salvar</a></button>
+     <input id="sombra" type="button" id="toggle" onclick="toggleShadow();" value="Ligar sombra"/>
+    <button id="salvar"><a id="download" onclick="save()">Salvar</a></button>
     <br>
     <br>
-      <input type="image"  onclick="drawTriangule();" src="imagens/Tri.png" class="botao">
-      <input type="image"  onclick="drawFillTriangule();" src="imagens/Tri2.png" class="botao">
+      <input id="triangulo" type="image"  onclick="drawTriangule();" src="imagens/Tri.png" class="botao">
+      <input id="triangulo2" type="image"  onclick="drawFillTriangule();" src="imagens/Tri2.png" class="botao">
 
 
    </div>
-   <canvas id="canvas" width="400" height="400" style="border: solid;" onmousedown="createFigure(event);" onmouseUp="closeFigure(event);"></canvas>
+   <canvas id="canvas" width="800" height="400" style="border: solid;" onmousedown="createFigure(event);" onmouseUp="closeFigure(event);"></canvas>
    <img id="imagem" style="border:solid;">
  
  </body>

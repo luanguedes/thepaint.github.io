@@ -1,3 +1,70 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Finger+Paint');
+/*@font-face{
+	font-family: ;
+	src: url();
+}*/
+
 *{
 	text-decoration: none;
+}
+h1#titulo{
+	position: absolute;
+	left: 520px;
+	font-family: 'Finger Paint', cursive;
+}
+input#triangulo2{
+	position: absolute;
+	left: 435px;
+	top: 112px;
+}
+input#triangulo{
+	position: absolute;
+	left: 380px;
+	top: 110px;
+}
+
+canvas#canvas{
+	position: absolute;
+	bottom: 100px;
+	left: 200px;
+}
+input#retangulo2{
+	position: absolute;
+	top: 125px;
+	left: 330px;
+}
+input#retangulo{
+	position: absolute;
+	top: 125px;
+	left: 298px;
+}
+input#linha3{
+	position: absolute;
+	top: 121px;
+	left: 265px;
+}
+input#linha2{
+	position: absolute;
+	top: 120px;
+	left: 230px;
+}
+input#linha{
+	position: absolute;
+	top: 123px;
+	left: 200px;
+}
+input:hover{
+	border: 1px black solid;
+}
+input#sombra{
+	position: absolute;
+	left: 850px;
+	top: 132px;
+}
+
+button#salvar{
+	position: absolute;
+	left: 950px;
+	top: 132px;
 }
