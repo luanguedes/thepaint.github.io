@@ -12,6 +12,7 @@ h1#titulo{
 	position: absolute;
 	left: 520px;
 	font-family: 'Finger Paint', cursive;
+	font-size: 50px;
 }
 input#triangulo2{
 	position: absolute;
@@ -26,7 +27,7 @@ input#triangulo{
 
 canvas#canvas{
 	position: absolute;
-	bottom: 100px;
+	bottom: 300px;
 	left: 200px;
 }
 input#retangulo2{
@@ -63,7 +64,7 @@ input#sombra{
 	top: 132px;
 }
 
-button#salvar{
+.salvar{
 	position: absolute;
 	left: 950px;
 	top: 132px;
